@@ -7,7 +7,7 @@ function Home() {
           <p>Esta aplicación web ha sido creada utilizando Reactjs y Nodejs.</p>
           <div class="card mx-auto bg-light mb-7 w-75">
             <div class="card-body">
-            <p class="card-text">El objetivo de esta herramienta es generar un análisis sencillo a partir de un archivo csv de registros.<br></br> 
+            <p class="card-text">El objetivo de esta herramienta es generar un análisis sencillo a partir de un archivo csv de registros.<br></br>
               Dirigase a <a href="/archivo">archivo</a>, y suba un archivo de extensión csv para comenzar.</p>
             </div>
             </div>

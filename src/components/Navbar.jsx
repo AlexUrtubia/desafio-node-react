@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 
 function Navbar() {
   const {pathname} = useLocation()
-    if (pathname === "/" || pathname === "/creditos" || pathname === "/archivo") 
+    if (pathname === "/" || pathname === "/creditos" || pathname === "/archivo")
     return (
     <div className="navigation">
       <nav className="navbar navbar-expand navbar-dark bg-dark">
