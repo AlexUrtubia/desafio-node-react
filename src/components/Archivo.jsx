@@ -58,61 +58,66 @@ function Archivo() {
   };
 
   return (
-    <div class="container-fluid px-5">
-      <div class="row h-75 justify-content-center align-items-center text-center">
-        <div class="col-lg-12">
-          <h1 class="font-weight-light py-2">Análisis de csv</h1>
+    <div class="container py-5">
+      <div class="row h-75 py-5 justify-content-center align-items-center text-center">
+        <div class="col-sm-12 py-1">
+          <h1 class="font-weight-light">Análisis de csv</h1>
           <h6>
-            Esta aplicación es capaz de analizar la cantidad de registros según
-            país,
-            <br></br> entregando como resultado una tabla con la cantidades
-            agrupadas de mayor a menor.
+            Suba el archivo csv y obtenga la cantidad de registrados según país ordenados de mayor a menor.
           </h6>
-          <br></br>
-          <div class="card w-25 mx-auto bg-light">
-            <div class="card-body">
-              <h5 class="card-title">Suba su archivo</h5>
-              <p class="card-text">
-                Asegurese de seleccionar un archivo de registros que contenga
-                una columna llamada "pais".
-              </p>
-              <input
-                class="form-control-file"
-                type="file"
-                name="file"
-                onChange={changeHandler}
-                accept=".csv"
-              />
-            </div>
-          </div>
         </div>
       </div>
+        <div className="row justify-content-center align-items-center text-center">
+          <div className="col-sm-12">
+            <div class="card w-50 mx-auto bg-light">
+              <div class="card-body">
+                <h5 class="card-title">Suba su archivo</h5>
+                <p class="card-text text-center">
+                  Asegúrese de que el archivo contenga una columna llamada "pais".
+                </p>
+                <div className="row justify-content-center align-items-center text-center">
+                  <div className="col-sm-8">
+                  <input
+                    class="form-control-file"
+                    type="file"
+                    name="file"
+                    onChange={changeHandler}
+                    accept=".csv"
+                  />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><br></br><br></br>
       <div class="row justify-content-center align-items-center text-center">
-        <div class="col-lg-12">
-          <table class="table table-hover table-bordered table-striped mx-auto w-50">
-            <thead class="thead-dark">
-              <tr>
-                {tableRows.map((rows, index) => {
+        <div class="col-sm-12">
+          <div className="table-responsive">
+            <table class="table table-hover table-bordered table-striped mx-auto w-50">
+              <thead class="thead-dark">
+                <tr>
+                  {tableRows.map((rows, index) => {
+                    return (
+                      <th key={index}>
+                        {rows.charAt(0).toUpperCase() + rows.slice(1)}
+                      </th>
+                    );
+                  })}
+                </tr>
+              </thead>
+              <tbody>
+                {values.map((value, index) => {
                   return (
-                    <th key={index}>
-                      {rows.charAt(0).toUpperCase() + rows.slice(1)}
-                    </th>
+                    <tr key={index}>
+                      {value.map((val, i) => {
+                        return <td key={i}>{val}</td>;
+                      })}
+                    </tr>
                   );
                 })}
-              </tr>
-            </thead>
-            <tbody>
-              {values.map((value, index) => {
-                return (
-                  <tr key={index}>
-                    {value.map((val, i) => {
-                      return <td key={i}>{val}</td>;
-                    })}
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>

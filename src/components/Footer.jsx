@@ -4,16 +4,12 @@ function Footer() {
   const { pathname } = useLocation();
   if (pathname === "/" || pathname === "/creditos")
     return (
-      <div className="footer">
-        <footer class="py-3 bg-dark fixed-bottom">
-          <div class="container">
-            <p class="m-0 text-center text-white">
-              Contacto en alex.urtubia.contreras@gmail.com
-            </p>
+      <footer class="text-center text-white">
+          <div class="text-center">
+            Contacto alex.urtubia.contreras@gmail.com
           </div>
         </footer>
-      </div>
-    );
+      );
   return null;
 }
 

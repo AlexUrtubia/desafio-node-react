@@ -7,26 +7,26 @@ function Navbar() {
     if (pathname === "/" || pathname === "/creditos" || pathname === "/archivo")
     return (
     <div className="navigation">
-      <nav className="navbar navbar-expand navbar-dark bg-dark">
-        <div className="container">
-          <NavLink className="navbar-brand" to="/">
+      <nav className="navbar navbar-expand-sm ">
+        <div className="container ">
+          <NavLink className="navbar-brand text-white" to="/">
             Desafío React Node
           </NavLink>
           <div>
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-                <NavLink className="nav-link" to="/">
+                <NavLink className="nav-link text-white" to="/">
                   Inicio
                   <span className="sr-only">(current)</span>
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/archivo">
+                <NavLink className="nav-link text-white" to="/archivo">
                   Archivo
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/creditos">
+                <NavLink className="nav-link text-white" to="/creditos">
                   Créditos
                 </NavLink>
               </li>
@@ -35,7 +35,8 @@ function Navbar() {
         </div>
       </nav>
     </div>
-  );
+    );
+
   return null;
 }
 

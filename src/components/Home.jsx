@@ -1,7 +1,7 @@
 function Home() {
   return (
-    <div class="container-fluid px-5">
-      <div class="row h-100 justify-content-center align-items-center text-center">
+    <div class="container py-5">
+      <div class="row h-75 py-5 justify-content-center align-items-center text-center">
         <div class="col-lg-12">
           <h1 class="font-weight-light">Bienvenid@!</h1>
           <p>Esta aplicación web ha sido creada utilizando Reactjs y Nodejs.</p>

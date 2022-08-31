@@ -1,20 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Navbar, Footer, Home, Archivo, Creditos, Error404} from "./components/Index";
+import App from "./App"
 
 ReactDOM.render(
-  <Router>
-    <Navbar />
-    <Routes>
-      <Route path="/" element={<Home/>} />
-      <Route path="/Archivo" element={<Archivo/>} />
-      <Route path="/Creditos" element={<Creditos/>} />
-      <Route path="/*" element={<Error404/>} />
-    </Routes>
-    <Footer />
-  </Router>,
-
+<App />,
   document.getElementById("root")
 );
