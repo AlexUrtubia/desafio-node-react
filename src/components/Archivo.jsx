@@ -3,7 +3,7 @@ import Papa from "papaparse";
 
 function Archivo() {
   // Instancio useState 4 veces, para los datos del csv, para el nombre de las columnas,
-    // Los valores de la tabla y un titilo a desplegarse
+  // Los valores de la tabla y un titilo a desplegarse
   const [parsedData, setParsedData] = useState([null]);
 
   const [tableRows, setTableRows] = useState([]);
@@ -26,11 +26,11 @@ function Archivo() {
         datos.forEach((object) => {
           object.cantidad = 1;
         });
-        console.log(datos)
+        console.log(datos);
         // Se crea un objeto que se utilizará como auxiliar para la tabla a desplegar
         var holder = {};
         // Recorro datos, consulto si holder contiene la llave "pais", si no existe la agrego y tomo como valor cantidad
-          // si ya existe, sumo uno a cantidad para esa llave (cantidad siempre vale 1 en datos)
+        // si ya existe, sumo uno a cantidad para esa llave (cantidad siempre vale 1 en datos)
         datos.forEach(function (datos) {
           if (holder.hasOwnProperty(datos.pais)) {
             holder[datos.pais] = holder[datos.pais] + datos.cantidad;
@@ -52,7 +52,7 @@ function Archivo() {
         tabla.map((d) => {
           rowsArray.push(Object.keys(d));
           valuesArray.push(Object.values(d));
-          return (rowsArray, valuesArray);
+          return rowsArray, valuesArray;
         });
 
         // Cambios de estado
@@ -64,11 +64,11 @@ function Archivo() {
         // values contiene ahora los valores correspondientes: nombre del país y suma final.
         setValues(valuesArray);
         // Se consulta si parsedData deja de ser nulo, si cambió actualiza su contenido.
-        (parsedData != null) ?
-          setTitulo ("Cantidad de registros según país") :
-          setTitulo (null);
-      }
-    })
+        parsedData != null
+          ? setTitulo("Cantidad de registros según país")
+          : setTitulo(null);
+      },
+    });
   };
 
   return (
@@ -77,20 +77,21 @@ function Archivo() {
         <div class="col-sm-12 py-1">
           <h1 class="font-weight-light">Análisis de csv</h1>
           <h6>
-            Suba el archivo csv y obtenga la cantidad de registrados según país ordenados de mayor a menor.
+            Suba el archivo csv y obtenga la cantidad de registrados según país
+            ordenados de mayor a menor.
           </h6>
         </div>
       </div>
-        <div className="row justify-content-center align-items-center text-center">
-          <div className="col-sm-12">
-            <div class="card w-50 mx-auto bg-light">
-              <div class="card-body">
-                <h5 class="card-title">Suba su archivo</h5>
-                <p class="card-text text-center">
-                  Asegúrese de que el archivo contenga una columna llamada "pais".
-                </p>
-                <div className="row justify-content-center align-items-center text-center">
-                  <div className="col-sm-8">
+      <div className="row justify-content-center align-items-center text-center">
+        <div className="col-sm-12">
+          <div class="card w-50 mx-auto bg-light">
+            <div class="card-body">
+              <h5 class="card-title">Suba su archivo</h5>
+              <p class="card-text text-center">
+                Asegúrese de que el archivo contenga una columna llamada "pais".
+              </p>
+              <div className="row justify-content-center align-items-center text-center">
+                <div className="col-sm-8">
                   <input
                     class="form-control-file"
                     type="file"
@@ -98,16 +99,16 @@ function Archivo() {
                     onChange={changeHandler}
                     accept=".csv"
                   />
-                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
       <div class="row justify-content-center align-items-center text-center">
         <div class="col-sm-12">
           <div className="table-responsive">
-          <h5 class="py-3">{titulo}</h5>
+            <h5 class="py-3">{titulo}</h5>
             <table class="table table-hover table-bordered table-striped mx-auto w-50">
               <thead class="thead-dark">
                 <tr>

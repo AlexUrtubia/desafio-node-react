@@ -8,7 +8,7 @@ function Footer() {
           <div class="text-center">
             Contacto alex.urtubia.contreras@gmail.com
           </div>
-      </footer>
+        </footer>
       );
   return null;
 }
