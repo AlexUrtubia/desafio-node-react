@@ -25,4 +25,4 @@ Posteriormente ejecutar
 
 Y luego abrir [http://localhost:3000](http://localhost:3000) para ver en su navegador la aplicación.
 
-También es posible ver su funcionamiento directamente desde su [deploy en Heroku](http://localhost:3000)
+También es posible ver su funcionamiento directamente desde su [deploy en Heroku](https://desafio-node-react-alex.herokuapp.com/)
