@@ -1,0 +1,23 @@
+[33mcommit 0a0c633c64a4e324ef1eadda19469bce9200172f[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Alex Urtubia <alex.urtubia.contreras@gmail.com>
+Date:   Wed Aug 31 18:55:05 2022 -0400
+
+    más correcciones
+
+[33mcommit 591ec65733ddf7f8311b689eb51f5114df9924cf[m
+Author: Alex Urtubia <alex.urtubia.contreras@gmail.com>
+Date:   Wed Aug 31 00:33:05 2022 -0400
+
+    Correciones
+
+[33mcommit 008db0f8ac1ef9ceca3c95154d7e7365d71be240[m
+Author: Alex Urtubia <alex.urtubia.contreras@gmail.com>
+Date:   Tue Aug 30 23:31:29 2022 -0400
+
+    First commit
+
+[33mcommit ecf776964912797e0ce5d0daae870f54c989850e[m
+Author: Alex Urtubia <alex.urtubia.contreras@gmail.com>
+Date:   Tue Aug 30 19:18:04 2022 -0400
+
+    Initialize project using Create React App
